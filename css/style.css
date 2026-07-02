@@ -1,0 +1,389 @@
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1f2328;
+  background: #f7f8fa;
+  padding: 0 0 56px;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 0;
+}
+
+/* ── Nav ── */
+.site-nav {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-nav .nav-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.site-nav .nav-inner::-webkit-scrollbar { display: none; }
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #57606a;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.site-nav a:hover { color: #1f2328; }
+.site-nav a.active {
+  color: #3b82d4;
+  border-bottom-color: #3b82d4;
+  font-weight: 700;
+}
+
+/* ── Page Header ── */
+.page-header {
+  padding: 24px 0 18px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2328;
+  margin-bottom: 2px;
+}
+.page-header .page-subtitle { font-size: 14px; color: #57606a; }
+
+/* ── Hero ── */
+.hero {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 32px 28px 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2328;
+  margin-bottom: 6px;
+}
+.hero .subtitle {
+  color: #57606a;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.badge {
+  background: #f7f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 3px 13px;
+  font-size: 13px;
+  color: #57606a;
+}
+
+/* ── Section Card ── */
+.section-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  background: #f7f8fa;
+  border-bottom: 1px solid #e5e7eb;
+}
+.section-header .icon { font-size: 18px; line-height: 1; }
+.section-header h2 { font-size: 16px; font-weight: 700; color: #1f2328; }
+.section-body { padding: 18px 20px; }
+
+/* ── Info Grid ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 520px) { .info-grid { grid-template-columns: 1fr; } }
+
+.info-card {
+  background: #f7f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.info-card .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #57606a;
+  margin-bottom: 4px;
+}
+.info-card .value { font-size: 14px; font-weight: 600; color: #1f2328; }
+.info-card .detail { font-size: 13px; color: #57606a; margin-top: 2px; }
+.info-card .meta { font-size: 12px; color: #57606a; margin-top: 4px; }
+.arrow { color: #3b82d4; font-weight: 700; }
+
+/* ── Accommodation ── */
+.accom-block {
+  border-left: 3px solid #3b82d4;
+  padding-left: 14px;
+  margin-bottom: 16px;
+}
+.accom-block:last-child { margin-bottom: 0; }
+.accom-block .period {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b82d4;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 4px;
+}
+.accom-block.second { border-left-color: #7c5cd8; }
+.accom-block.second .period { color: #7c5cd8; }
+.accom-block .name { font-size: 15px; font-weight: 700; color: #1f2328; }
+.accom-block .addr { font-size: 13px; color: #57606a; margin-top: 2px; }
+.accom-block .note { font-size: 13px; color: #57606a; margin-top: 6px; }
+
+/* ── Summary Box ── */
+.summary-box {
+  background: #f0f6ff;
+  border: 1px solid #c5d9f8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #1f2328;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.summary-box strong { color: #3b82d4; }
+.principle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.principle-tag {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 4px 12px;
+  color: #3730a3;
+  font-weight: 600;
+}
+
+/* ── Itinerary Overview Grid ── */
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 520px) { .itinerary-grid { grid-template-columns: 1fr; } }
+
+.itinerary-overview-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s;
+}
+.itinerary-overview-card:hover { border-color: #3b82d4; }
+.itinerary-overview-card .ioc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  background: #f7f8fa;
+  border-bottom: 1px solid #e5e7eb;
+}
+.itinerary-overview-card .ioc-badge {
+  background: #3b82d4;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.itinerary-overview-card .ioc-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2328;
+  line-height: 1.4;
+}
+.itinerary-overview-card .ioc-body {
+  padding: 10px 16px 12px;
+}
+.itinerary-overview-card .ioc-spots {
+  font-size: 12px;
+  color: #57606a;
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
+.itinerary-overview-card .ioc-spots li::before {
+  content: '· ';
+  color: #3b82d4;
+}
+.itinerary-overview-card .ioc-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #3b82d4;
+  font-weight: 600;
+}
+
+/* ── Day Page ── */
+.day-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.day-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2328;
+  text-decoration: none;
+  cursor: pointer;
+}
+.day-nav-btn:hover { border-color: #3b82d4; color: #3b82d4; }
+.day-nav-btn.disabled { opacity: 0.35; pointer-events: none; }
+.day-nav-center {
+  font-size: 13px;
+  color: #57606a;
+  text-align: center;
+  flex: 1;
+}
+
+/* ── Day Detail Card ── */
+.day-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #f7f8fa;
+  border-bottom: 1px solid #e5e7eb;
+}
+.day-badge {
+  background: #3b82d4;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.day-title { font-size: 15px; font-weight: 700; color: #1f2328; flex: 1; }
+.day-body { padding: 16px 18px; }
+
+/* ── Block Label ── */
+.block-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #57606a;
+  margin-bottom: 8px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.block-label:first-child { margin-top: 0; }
+.block-label::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+
+/* ── Spot List ── */
+ul.spot-list { list-style: none; padding: 0; }
+ul.spot-list li {
+  padding: 7px 0 7px 20px;
+  position: relative;
+  font-size: 14px;
+  color: #1f2328;
+  border-bottom: 1px dashed #e5e7eb;
+}
+ul.spot-list li:last-child { border-bottom: none; }
+ul.spot-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #3b82d4;
+  font-size: 11px;
+  top: 10px;
+}
+ul.spot-list li .spot-name { font-weight: 600; }
+ul.spot-list li .spot-note {
+  color: #57606a;
+  font-size: 13px;
+  display: block;
+  margin-top: 1px;
+}
+
+/* ── Food Tags ── */
+.food-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.food-tag {
+  background: #fef9ec;
+  border: 1px solid #f0d888;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 3px 10px;
+  color: #7c5c00;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #57606a;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  margin-top: 32px;
+  font-weight: 300;
+}
