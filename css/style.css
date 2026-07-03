@@ -367,7 +367,8 @@ ul.spot-list li .spot-note {
 }
 
 /* ── Food Tags ── */
-.food-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.food-section-label { font-size: 12px; font-weight: 600; color: #57606a; margin: 10px 0 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+.food-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; margin-bottom: 6px; }
 .food-tag {
   background: #fef9ec;
   border: 1px solid #f0d888;

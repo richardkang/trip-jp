@@ -1,2 +1,1 @@
-# trip-jp
-trip jp
+# public pages
