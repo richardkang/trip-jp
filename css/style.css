@@ -339,6 +339,13 @@ body {
 }
 .block-label:first-child { margin-top: 0; }
 .block-label::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+.block-content {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 0 2px;
+}
+
+
 
 /* ── Spot List ── */
 ul.spot-list { list-style: none; padding: 0; }
